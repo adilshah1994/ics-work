@@ -1,3 +1,4 @@
+# Lists and slicing
 # 1
 
 mylist = [1, 2, 3, 4, 5]
@@ -58,3 +59,70 @@ countries = ["uk", "usa", "uk", "uae"]
 print dir(countries)
 
 print countries.count("uk")
+
+
+# Tuples
+#1
+
+t  = (1,)
+print t[-1]
+
+sheep = range(100,201)
+
+print sheep
+
+lamb = tuple(sheep)
+
+print lamb[0]
+print lamb[-1]
+
+
+#2
+
+mylist = [23, "hi", 2.4e-10]
+for (count, item) in enumerate(mylist):
+    print count, item
+
+
+#3
+
+(first, middle, last) = mylist
+print first, middle, last
+
+(first, middle, last) = (middle, last, first)
+print first, middle, last
+
+
+#Input and Output
+#1
+
+with open("weather.csv", "r") as reader:
+    data = reader.read()
+print data
+
+
+#2
+
+with open("weather.csv", "r") as reader:
+    cattle = reader.readline()
+    while cattle:
+        print cattle
+        cattle = reader.readline()
+
+print "It's over"
+
+
+#3
+
+with open("weather.csv", "r") as reader:
+    cattle = reader.readline()
+    rain = []
+    for line in reader.readlines():
+        calf = line.strip().split(",")[-1]
+        calf = float(calf)
+        rain.append(calf)
+print rain
+
+with open("myrain.txt", "w") as writer:
+    for calf in rain:    
+        writer.write(str(calf) + "\n")
