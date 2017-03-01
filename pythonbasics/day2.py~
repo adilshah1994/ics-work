@@ -126,3 +126,52 @@ print rain
 with open("myrain.txt", "w") as writer:
     for calf in rain:    
         writer.write(str(calf) + "\n")
+
+
+# Strings
+#1
+
+s = "I love to write python"
+for letter in s:
+    print letter
+
+print s[5]
+
+print s[-1]
+
+print len(s)
+
+print s[0], s[0][0], s[0][0][0]
+
+
+#2
+
+s = "I love to write python"
+
+split_s = s.split()
+
+print split_s
+
+for cow in split_s:
+    if cow.find("i") > -1:
+        print "I found 'i' in: '{0}'".format(cow)
+
+
+#3
+
+something = "Completely Different"
+
+print dir(something)
+
+print something.count("t")
+
+print something.find("plete")
+
+split_something = something.split("e")
+
+thing2 = something.replace("Different", "Silly")
+print thing2
+
+#something[0] = "B"
+
+
