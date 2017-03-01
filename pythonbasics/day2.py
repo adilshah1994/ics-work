@@ -31,7 +31,7 @@ one_to_ten.extend([12, 13, 14])
 print one_to_ten
 
 
-#3
+# 3
 
 forward = []
 backward = []
@@ -52,7 +52,7 @@ forward.reverse()
 print forward == backward
 
 
-#4
+# 4
 
 countries = ["uk", "usa", "uk", "uae"]
 
@@ -62,7 +62,7 @@ print countries.count("uk")
 
 
 # Tuples
-#1
+# 1
 
 t  = (1,)
 print t[-1]
@@ -77,14 +77,14 @@ print lamb[0]
 print lamb[-1]
 
 
-#2
+# 2
 
 mylist = [23, "hi", 2.4e-10]
 for (count, item) in enumerate(mylist):
     print count, item
 
 
-#3
+# 3
 
 (first, middle, last) = mylist
 print first, middle, last
@@ -93,15 +93,15 @@ print first, middle, last
 print first, middle, last
 
 
-#Input and Output
-#1
+# Input and Output
+# 1
 
 with open("weather.csv", "r") as reader:
     data = reader.read()
 print data
 
 
-#2
+# 2
 
 with open("weather.csv", "r") as reader:
     cattle = reader.readline()
@@ -112,7 +112,7 @@ with open("weather.csv", "r") as reader:
 print "It's over"
 
 
-#3
+# 3
 
 with open("weather.csv", "r") as reader:
     cattle = reader.readline()
@@ -129,7 +129,7 @@ with open("myrain.txt", "w") as writer:
 
 
 # Strings
-#1
+# 1
 
 s = "I love to write python"
 for letter in s:
@@ -144,7 +144,7 @@ print len(s)
 print s[0], s[0][0], s[0][0][0]
 
 
-#2
+# 2
 
 s = "I love to write python"
 
@@ -157,7 +157,7 @@ for cow in split_s:
         print "I found 'i' in: '{0}'".format(cow)
 
 
-#3
+# 3
 
 something = "Completely Different"
 
@@ -174,4 +174,46 @@ print thing2
 
 #something[0] = "B"
 
+
+# Funtions
+# 1
+
+def double_it(number):
+    return number * 2
+
+print double_it(19)
+
+print double_it(19.5)
+
+print double_it("adil")
+
+
+# 2
+
+def calc_hypo(a, b):
+    hypo = (a**2 + b**2)**0.5
+    return hypo
+
+print calc_hypo(3, 4)
+
+
+# 3
+
+def calc_hypo(a, b):
+    if type(a) not in (int, float) or type(b) not in (int, float):
+        print "no good - have a conversation with yourself"
+        return False
+    if a <= 0 or b <= 0:
+        print "no good - have a conversation with yourself"
+        return False
+    else:
+        hypo = (a**2 + b**2)**0.5
+        print hypo
+        return hypo
+
+calc_hypo("adil", 2)
+
+calc_hypo(-2, 4)
+
+calc_hypo(2, 7.89)
 
