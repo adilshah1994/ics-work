@@ -56,3 +56,45 @@ print d.get("major", "no country")
 
 res = d.setdefault("mikhail", "ussr")
 print res, d["mikhail"]
+
+
+# Introduction to NumPy Arrays
+# 1
+
+import numpy as np
+
+x = range(1, 11)
+
+a1 = np.array(x, np.int64)
+
+a2 = np.array(x, np.float64)
+
+print a1.dtype
+print a2.dtype
+
+
+# 2
+
+a = np.zeros((2, 3, 4), dtype=np.int64)
+
+a = np.ones((2, 3, 4), dtype=np.int64)
+
+a = np.arange(1000)
+
+
+# 3
+
+x = [2, 3.2, 5.5, -6.4, -2.2, 2.4]
+a = np.array(x)
+
+print a[1]
+
+print a[1:4]
+
+a = np.array([[2, 3.2, 5.5, -6.4, -2.2, 2.4], [1, 22, 4, 0.1, 5.3, -9], [3, 1, 2.1, 21, 1.1, -2]])
+
+print a[:, 3]
+
+print a[1:4, 0:4]
+
+print a[1:, 2]
